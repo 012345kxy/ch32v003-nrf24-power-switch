@@ -102,6 +102,15 @@
 - 补充短路保护、缓启动和异常断电策略的固件设计文档。
 - 补充不同负载下的测试表格和温升记录。
 
+## Documentation Index
+
+- [Source code archive notes](docs/SOURCE_CODE.md)
+- [Source archive manifest](docs/SOURCE_MANIFEST.md)
+- [Firmware usage notes](docs/FIRMWARE_USAGE.md)
+- [Source verification checklist](docs/SOURCE_VERIFICATION.md)
+- [Assessment evidence checklist](docs/ASSESSMENT_EVIDENCE.md)
+- [Project photos](docs/PHOTOS.md)
+- [Open-source evidence index](docs/OPEN_SOURCE_EVIDENCE.md)
 ## Source Code
 
 本仓库已补充源码压缩包 `code/ch32v003-nrf24-power-switch-source-code.zip`，包含手持遥控器端与大功率电子开关端的 CH32V003 固件工程。源码归档说明、SHA256 校验值和打包边界见 `docs/SOURCE_CODE.md`。
@@ -109,3 +118,4 @@
 ## License
 
 This hardware design is released under CERN Open Hardware Licence Version 2 - Permissive (CERN-OHL-P-2.0). See LICENSE. If firmware is added later, place a separate software license in the firmware directory.
+
