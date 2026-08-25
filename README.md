@@ -2,11 +2,11 @@
 
 ## 项目背景
 
-本项目是一套由“大功率电子开关”和“手持遥控器”组成的无线通断控制系统。它面向机器人、无人机、航模、电池供电设备和高功率负载测试场景，解决一个很实际的问题：设备功率越来越大之后，手动插拔电池或靠近设备开关并不总是安全、方便，也不利于记录电流、电压、功率等状态。
+本项目包含大功率电子开关和手持遥控器两部分，用于电池供电设备的远程上电、断电和状态查看。适用场景包括机器人、无人机、航模、电源测试台和其他高功率负载调试。
 
-电子开关端负责承受高电压和大电流，完成电流检测、功率显示、无线回传和远程通断；遥控器端负责发送控制指令、显示回传状态，并通过两节 18650 电池和 PD 快充方案实现便携使用。换句话说，这不是一个孤立的开关板，而是一套“远程控制 + 状态监测 + 人机交互”的小系统。
+电子开关端负责主电源通断、电流采样、本地显示和无线回传；遥控器端负责发送控制指令，并显示回传的电压、电流和功率。遥控器使用两节 18650 电池供电，并支持 PD 快充，便于在测试现场单独使用。
 
-这个项目很适合体现工程中的“人用起来顺不顺手”。很多硬件项目只关注电路能不能通，但真正上设备时，还会遇到看不见电流、不知道是否上电成功、短路时来不及断开、测试人员必须靠近高功率设备等问题。本项目把 OLED 显示、NRF24L01 无线链路、检流芯片和大功率 MOSFET 组合起来，就是为了让通断控制更可控、更直观，也更适合真实调试环境。
+设计重点是让高功率测试更安全、状态更直观。使用者可以在离负载较远的位置控制上电状态，减少反复插拔高电流接头的操作，也能通过 OLED 直接看到当前负载状态。
 
 当前目录包含立创 EDA 专业版硬件工程文件：
 
@@ -102,15 +102,15 @@
 - 补充短路保护、缓启动和异常断电策略的固件设计文档。
 - 补充不同负载下的测试表格和温升记录。
 
-## Documentation Index
+## 文档入口
 
-- [Source code archive notes](docs/SOURCE_CODE.md)
-- [Source archive manifest](docs/SOURCE_MANIFEST.md)
-- [Firmware usage notes](docs/FIRMWARE_USAGE.md)
-- [Source verification checklist](docs/SOURCE_VERIFICATION.md)
-- [Assessment evidence checklist](docs/ASSESSMENT_EVIDENCE.md)
-- [Project photos](docs/PHOTOS.md)
-- [Open-source evidence index](docs/OPEN_SOURCE_EVIDENCE.md)
+- [源码压缩包说明](docs/SOURCE_CODE.md)
+- [源码清单](docs/SOURCE_MANIFEST.md)
+- [固件使用说明](docs/FIRMWARE_USAGE.md)
+- [源码检查清单](docs/SOURCE_VERIFICATION.md)
+- [项目照片](docs/PHOTOS.md)
+- [项目维护记录](docs/PROJECT_LOG.md)
+
 ## Source Code
 
 本仓库已补充源码压缩包 `code/ch32v003-nrf24-power-switch-source-code.zip`，包含手持遥控器端与大功率电子开关端的 CH32V003 固件工程。源码归档说明、SHA256 校验值和打包边界见 `docs/SOURCE_CODE.md`。
